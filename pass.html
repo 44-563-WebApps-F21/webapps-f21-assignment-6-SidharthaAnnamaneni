@@ -7,6 +7,19 @@
         
         <h1>Pass phrase by Sidhartha Annamaneni</h1>
 
+        <style>
+            .container {
+              position: relative;
+            }    
+            .bottomleft {
+              position: absolute;
+              bottom: 8px;
+              left: 16px;
+              font-size: 20px;
+              color:rgb(255, 251, 0);
+            }
+        </style>
+
         <form>
             <label for="form1_age">Enter the secret phrase </label>
             <input type ="password" id="secret_phrase" name="form1_age" value="Let me in"> <br>
@@ -31,7 +44,8 @@
         phrase = document.getElementById("phrase").value
         
         out = document.getElementById("result")
-        if(sphrase == phrase){
+        if (wrong<3){
+            if(sphrase == phrase){
             correct = correct +1
             alert("Access is allowed")
             out.innerHTML = "Correct:" +correct
@@ -39,9 +53,12 @@
             wrong = wrong +1
             alert("Access is denied")
             out.innerHTML = "Wrong:" +wrong
+        }else{
+            alert("Account Locked.");
         }
     }
     </script>
+    
     <div class="container">
         <img src="deer.jpg" alt="deer" id="imgClickAndChange" height="200" width="200" onclick="newImage()">
         <p id="changeValue">Here each image case values are displayed when clicked on image.</p>

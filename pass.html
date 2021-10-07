@@ -18,6 +18,14 @@
               font-size: 20px;
               color:rgb(235, 231, 36);
             }
+            input[type=text]{
+                border: 2px solid rgb(216, 127, 135);
+                background-color: #d3f1e6;
+            }
+            input[type=password]{
+                border: 2px solid rgb(241, 149, 149);
+                background-color: #cbf0e2;
+            }
         </style>       
 
         <form>
@@ -28,7 +36,7 @@
             <label for="form1_nick">Enter a phrase </label>
             <input type ="text" id="form1_nick" name="form1_nick" autofocus> 
             <br><br>
-            <input type="button" style="background-color: rgb(104, 208, 226); cursor:pointer;", onclick = "processPhrase()" value="Check the phrase">
+            <input type="button" style="background-color: rgb(185, 239, 250); cursor:pointer;", onclick = "processPhrase()" value="Check the phrase">
         </form>
 
         <p id="result">This text will be replaced </p>
@@ -88,6 +96,6 @@
             usingImage++;
         }
     </script>
-    
+
     </body>
 </html>
